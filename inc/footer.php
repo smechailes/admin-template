@@ -1,4 +1,4 @@
-   <?php include 'config.php'; ?>
+
     <!-- jQuery -->
     <script src="<?php echo JS_URL; ?>jquery.js"></script>
 

@@ -22,7 +22,7 @@
     <link href="<?php echo CSS_URL; ?>plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="<?php echo FONTAWE_URL; ?>/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo FONTAWE_URL; ?>css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <style>
     .login-ele{

@@ -1,6 +1,14 @@
 
 <?php session_start(); ?>
-<?php include 'inc/header.php'; ?>
+<?php include 'inc/header.php';
+    ?>
+<?php
+    if(((isset($_SESSION['SUCCESS']) && $_SESSION['SUCCESS'] != "") || (isset($_COOKIE['is_logged_in']) && $_COOKIE['is_logged_in'] != "")) == false){
+        $_SESSION['ERROR'] = "Please login first";
+        header('location: login.php'); 
+    }
+    
+?>
 
     <div id="wrapper">
 

@@ -2,9 +2,10 @@
 <?php include 'inc/header.php';
 ?>
 <?php
-	if(isset($_SESSION['SUCCESS']) && $_SESSION['SUCCESS'] != ""){
+	if((isset($_SESSION['SUCCESS']) && $_SESSION['SUCCESS'] != "") || (isset($_COOKIE['is_logged_in']) && $_COOKIE['is_logged_in'] != "")) {
 		header('location: index.php');
 	}
+	
 ?>
 	  <div class="container">
 	  	<div class="row">

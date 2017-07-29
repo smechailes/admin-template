@@ -1,4 +1,5 @@
 
+<?php session_start(); ?>
 <?php include 'inc/header.php'; ?>
 
     <div id="wrapper">
@@ -27,6 +28,7 @@
                                         <img class="media-object" src="http://placehold.it/50x50" alt="">
                                     </span>
                                     <div class="media-body">
+                                       
                                         <h5 class="media-heading"><strong>John Smith</strong>
                                         </h5>
                                         <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
@@ -111,7 +113,7 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                            <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                         </li>
                     </ul>
                 </li>
@@ -165,9 +167,10 @@
 
                 <!-- Page Heading -->
                 <div class="row">
+                   
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Dashboard <small>Statistics Overview</small>
+                            Dashboard <small>Statistics Overview</small>  <?php include 'inc/notification.php'; ?>
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">

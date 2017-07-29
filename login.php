@@ -1,21 +1,26 @@
 <?php session_start(); ?>
 <?php include 'inc/header.php';
 ?>
+<?php
+	if(isset($_SESSION['SUCCESS']) && $_SESSION['SUCCESS'] != ""){
+		header('location: index.php');
+	}
+?>
 	  <div class="container">
 	  	<div class="row">
 	  			<div class="col-md-6 col-md-offset-3">
 	  				<?php include 'inc/notification.php'; ?>
 					<form class="form-horizontal" method="POST" action="login-process.php">
 					  <div class="form-group">
-					    <label for="inputUsername" class="col-sm-2 control-label login-ele">Username</label>
+					    <label for="inputUsername"  class="col-sm-2 control-label login-ele">Username</label>
 					    <div class="col-sm-10">
-					      <input type="text" class="form-control" id="inputUsername" placeholder="Username" name="username">
+					      <input type="text" required class="form-control" id="inputUsername" placeholder="Username" name="username">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputPassword3" class="col-sm-2 control-label login-ele">Password</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="password">
+					      <input type="password" required class="form-control" id="inputPassword3" placeholder="Password" name="password">
 					    </div>
 					  </div>
 					  <div class="form-group">

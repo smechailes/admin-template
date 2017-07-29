@@ -7,7 +7,7 @@ if(isset($_POST) && $_POST != ""){
 		if($password === $_POST['password']){
 			$_SESSION['USERNAME'] = $_POST['username'];
 			$_SESSION['PASSWORD'] = $_POST['password'];
-			$_SESSION['SUCCESS'] = "Welcome back";
+			$_SESSION['SUCCESS'] = "Welcome back, ".$_SESSION['USERNAME']." !";
 			header('location: login.php');
  		}else{
 			$_SESSION['WARNING'] = "PASSWORD IS INCORRECT";
